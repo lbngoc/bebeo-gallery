@@ -1,0 +1,57 @@
+[
+  {
+    "id": "da-lat-2026",
+    "title": "Chuyến du lịch Đà Lạt",
+    "location": "Đà Lạt, Lâm Đồng",
+    "date": "2026-03",
+    "description": "Cả nhà cùng đi ngắm hoa và uống cà phê buổi sớm ở Đà Lạt.",
+    "categories": ["Du lịch"],
+    "thumbnail": "/assets/images/thumbnails/albums/dalat.jpg",
+    "cloudUrl": "https://drive.google.com/drive/folders/example-da-lat-2026",
+    "cloudProvider": "google-drive"
+  },
+  {
+    "id": "dam-cuoi-lan-minh",
+    "title": "Đám cưới Lan & Minh",
+    "location": "Hà Nội",
+    "date": "2025-11-15",
+    "description": "Khoảnh khắc đáng nhớ trong ngày cưới của Lan và Minh.",
+    "categories": ["Đám cưới"],
+    "thumbnail": "/assets/images/thumbnails/albums/wedding.jpg",
+    "cloudUrl": "https://www.pcloud.com/publink/show?code=example-dam-cuoi",
+    "cloudProvider": "pcloud"
+  },
+  {
+    "id": "sinh-nhat-bong-5-tuoi",
+    "title": "Sinh nhật bé Bống 5 tuổi",
+    "location": "Nhà riêng, TP.HCM",
+    "date": "2026-01-20",
+    "description": "Tiệc sinh nhật ấm cúng của bé Bống cùng ông bà, bố mẹ.",
+    "categories": ["Sinh nhật"],
+    "thumbnail": "/assets/images/thumbnails/albums/birthday.jpg",
+    "cloudUrl": "https://drive.google.com/drive/folders/example-sinh-nhat-bong",
+    "cloudProvider": "google-drive"
+  },
+  {
+    "id": "cam-trai-ba-vi",
+    "title": "Cắm trại cuối tuần ở Ba Vì",
+    "location": "Ba Vì, Hà Nội",
+    "date": "2025-09",
+    "description": "Một ngày cuối tuần cắm trại, nướng đồ ăn và ngắm sao.",
+    "categories": ["Du lịch", "Sinh hoạt gia đình"],
+    "thumbnail": "/assets/images/thumbnails/albums/bavi.jpg",
+    "cloudUrl": "https://drive.google.com/drive/folders/example-ba-vi",
+    "cloudProvider": "google-drive"
+  },
+  {
+    "id": "tet-doan-vien-2026",
+    "title": "Họp mặt gia đình Tết 2026",
+    "location": "Nhà nội, Nam Định",
+    "date": "2026-02",
+    "description": "Cả đại gia đình sum vầy đón Tết Nguyên Đán.",
+    "categories": ["Sum họp"],
+    "thumbnail": "/assets/images/thumbnails/albums/khong-ton-tai.jpg",
+    "cloudUrl": "https://www.pcloud.com/publink/show?code=example-tet-2026",
+    "cloudProvider": "pcloud"
+  }
+]

@@ -1,0 +1,22 @@
+{#
+  Params kỳ vọng: `album` (object theo data-model.md > Album)
+  Thẻ album: ảnh thumbnail làm nền (qua shortcode cardImage), tiêu đề, mô tả
+  địa điểm - thời gian (FR-005). Toàn bộ thẻ là 1 link mở cloudUrl ở tab mới
+  (FR-007). Ảnh lỗi/thiếu tự động fallback về placeholder (FR-015, xử lý
+  trong shortcode cardImage ở .eleventy.js).
+#}
+<a
+  href="{{ album.cloudUrl }}"
+  target="_blank"
+  rel="noopener"
+  class="group relative isolate flex aspect-[4/5] w-full flex-col justify-end overflow-hidden rounded-2xl shadow-sm ring-1 ring-water-200/50 transition hover:shadow-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-water-500 dark:ring-water-700/50"
+>
+  {% cardImage album.thumbnail, album.title, "absolute inset-0 -z-10 h-full w-full object-cover transition duration-300 group-hover:scale-105" %}
+
+  <div class="absolute inset-0 -z-10 bg-gradient-to-t from-water-900/85 via-water-900/15 to-transparent" aria-hidden="true"></div>
+
+  <div class="flex flex-col gap-1 p-4 text-earth-50 sm:p-5">
+    <h3 class="text-lg font-semibold sm:text-xl">{{ album.title }}</h3>
+    <p class="text-sm text-earth-100/90">{{ album.location }} · {{ album.date }}</p>
+  </div>
+</a>

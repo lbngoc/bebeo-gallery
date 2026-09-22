@@ -1,0 +1,36 @@
+<header
+  x-data="{}"
+  class="sticky top-0 z-40 border-b border-water-200/60 bg-earth-50/90 backdrop-blur supports-[backdrop-filter]:bg-earth-50/70 dark:border-water-700/60 dark:bg-water-900/90"
+  style="padding-top: env(safe-area-inset-top, 0px);"
+>
+  <div class="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3 sm:px-6">
+    <a href="#hero" class="font-hand text-2xl text-water-700 dark:text-earth-100 sm:text-3xl">
+      BeBeo Gallery
+    </a>
+
+    <div class="flex items-center gap-4 sm:gap-6">
+      <nav aria-label="Điều hướng chính" class="flex items-center gap-4 text-sm font-semibold sm:gap-6 sm:text-base">
+        <a href="#hero" class="text-water-700 transition hover:text-water-500 dark:text-earth-100 dark:hover:text-earth-300">
+          Giới thiệu
+        </a>
+        <a href="#gallery" class="text-water-700 transition hover:text-water-500 dark:text-earth-100 dark:hover:text-earth-300">
+          Ảnh
+        </a>
+        <a href="#video" class="text-water-700 transition hover:text-water-500 dark:text-earth-100 dark:hover:text-earth-300">
+          Video
+        </a>
+      </nav>
+
+      <button
+        type="button"
+        @click="$store.theme.toggle()"
+        :aria-pressed="$store.theme.isDark"
+        aria-label="Chuyển đổi giao diện sáng/tối"
+        class="flex h-10 w-10 items-center justify-center rounded-full border border-water-300 text-water-700 transition hover:bg-water-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-water-500 dark:border-earth-300/50 dark:text-earth-100 dark:hover:bg-water-800"
+      >
+        <span x-show="!$store.theme.isDark" aria-hidden="true">🌙</span>
+        <span x-show="$store.theme.isDark" aria-hidden="true">☀️</span>
+      </button>
+    </div>
+  </div>
+</header>

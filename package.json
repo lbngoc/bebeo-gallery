@@ -1,0 +1,26 @@
+{
+  "name": "bebeo-gallery",
+  "version": "1.0.0",
+  "description": "Trang landing page lưu giữ album ảnh và video nổi bật của gia đình BeBeo.",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "validate:content": "node scripts/validate-content.mjs",
+    "dev": "eleventy --serve",
+    "build": "npm run validate:content && eleventy"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.6",
+    "@11ty/eleventy-img": "^7.0.0",
+    "@11ty/eleventy-plugin-vite": "^8.0.0",
+    "@tailwindcss/vite": "^4.3.3",
+    "tailwindcss": "^4.3.3",
+    "vite": "^8.3.0"
+  },
+  "dependencies": {
+    "alpinejs": "^3.17.3"
+  }
+}

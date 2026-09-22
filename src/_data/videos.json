@@ -1,0 +1,29 @@
+[
+  {
+    "id": "gia-dinh-di-choi",
+    "title": "Gia đình đi chơi cuối tuần",
+    "poster": "/assets/images/thumbnails/videos/camping.jpg",
+    "sourceType": "youtube",
+    "embedRef": "aqz-KE-bpKQ",
+    "fallbackUrl": "https://www.youtube.com/watch?v=aqz-KE-bpKQ",
+    "order": 1
+  },
+  {
+    "id": "khoanh-khac-sum-hop",
+    "title": "Khoảnh khắc sum họp Tết",
+    "poster": "/assets/images/thumbnails/videos/family-gathering.jpg",
+    "sourceType": "google-drive",
+    "embedRef": "1a2B3c4D5e6F7g8H9iJ0kLmNoPqRsTuV",
+    "fallbackUrl": "https://drive.google.com/file/d/1a2B3c4D5e6F7g8H9iJ0kLmNoPqRsTuV/view",
+    "order": 2
+  },
+  {
+    "id": "video-cam-trai",
+    "title": "Video cắm trại Ba Vì",
+    "poster": "/assets/images/thumbnails/videos/bunny-trailer.jpg",
+    "sourceType": "pcloud",
+    "embedRef": "https://www.pcloud.com/publink/show?code=example-video-cam-trai",
+    "fallbackUrl": "https://www.pcloud.com/publink/show?code=example-video-cam-trai",
+    "order": 3
+  }
+]
