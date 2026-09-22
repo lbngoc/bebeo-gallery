@@ -1,0 +1,27 @@
+# Dependencies
+node_modules/
+
+# Build output
+_site/
+.11ty-vite/
+
+# Logs
+*.log
+npm-debug.log*
+
+# Environment
+.env
+.env.*
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+
+# Playwright MCP session artifacts (từ kiểm thử thủ công trong quá trình implement)
+.playwright-mcp/
+
+# Cache index bộ nhớ phiên làm việc của Claude Code (không thuộc codebase)
+.memsearch/
