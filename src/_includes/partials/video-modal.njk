@@ -1,0 +1,56 @@
+{# Modal phát video: mở qua $store.videoModal (video-modal.js). Đóng bằng nút
+   X, phím Esc (xử lý trong video-modal.js), hoặc click nền (FR-009, FR-015). #}
+<div
+  x-data
+  x-show="$store.videoModal.open"
+  x-cloak
+  class="fixed inset-0 z-50 flex items-center justify-center bg-water-900/80 p-4"
+  role="dialog"
+  aria-modal="true"
+  aria-labelledby="video-modal-title"
+  @click.self="$store.videoModal.close()"
+>
+  <div class="relative w-full max-w-3xl overflow-hidden rounded-2xl bg-water-800 shadow-xl">
+    <button
+      type="button"
+      x-ref="closeVideoModalButton"
+      @click="$store.videoModal.close()"
+      aria-label="Đóng video"
+      class="absolute right-3 top-3 z-10 flex h-10 w-10 items-center justify-center rounded-full bg-water-900/70 text-earth-50 transition hover:bg-water-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-earth-300"
+    >
+      <span aria-hidden="true">✕</span>
+    </button>
+
+    <div class="aspect-video w-full bg-black">
+      <template x-if="$store.videoModal.open && $store.videoModal.embedUrl && !$store.videoModal.embedFailed">
+        <iframe
+          :src="$store.videoModal.embedUrl"
+          :title="$store.videoModal.video ? $store.videoModal.video.title : 'Video'"
+          class="h-full w-full"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+          @error="$store.videoModal.markFailed()"
+        ></iframe>
+      </template>
+
+      <div
+        x-show="$store.videoModal.open && (!$store.videoModal.embedUrl || $store.videoModal.embedFailed)"
+        class="flex h-full flex-col items-center justify-center gap-3 p-6 text-center text-earth-50"
+      >
+        <p>Không thể phát video trực tiếp tại đây.</p>
+        <a
+          :href="$store.videoModal.video ? $store.videoModal.video.fallbackUrl : '#'"
+          target="_blank"
+          rel="noopener"
+          class="rounded-full bg-earth-400 px-5 py-2 text-sm font-semibold text-water-900 transition hover:bg-earth-300"
+        >
+          Mở video trên cloud
+        </a>
+      </div>
+    </div>
+
+    <div class="p-4" x-show="$store.videoModal.video">
+      <h3 id="video-modal-title" class="text-lg font-semibold text-earth-50" x-text="$store.videoModal.video ? $store.videoModal.video.title : ''"></h3>
+    </div>
+  </div>
+</div>

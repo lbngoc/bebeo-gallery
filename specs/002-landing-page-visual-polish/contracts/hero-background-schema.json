@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://bebeo.gallery/contracts/hero-background-schema.json",
+  "title": "BeBeo Gallery Hero Background Config Contract",
+  "description": "Hop dong cau hinh nen Hero (tuy chon). Duoc scripts/validate-content.mjs kiem tra khi build neu file src/_data/heroBackground.json ton tai. Neu file khong ton tai, Hero dung nen truu tuong mac dinh (FR-006c) va khong co loi gi.",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "image": {
+      "description": "Duong dan tuong doi toi anh nen Hero trong src/assets/images/hero/. null hoac vang mat = dung nen truu tuong mac dinh.",
+      "type": ["string", "null"],
+      "minLength": 1
+    },
+    "filter": {
+      "description": "Kieu bo loc mau ap dung khi co image. Mac dinh 'tinted' neu vang mat nhung image co gia tri.",
+      "type": "string",
+      "enum": ["mono", "tinted"]
+    }
+  },
+  "x-validation-notes": [
+    "Neu file heroBackground.json khong ton tai: bo qua hoan toan, khong loi (khac voi albums.json/videos.json la bat buoc).",
+    "Neu file ton tai nhung 'image' tro toi duong dan khong co that tren dia luc build: KHONG chan build — shortcode heroBackground trong .eleventy.js MUST tu dong fallback ve nen truu tuong mac dinh (xem data-model.md).",
+    "'filter' chi co y nghia khi 'image' co gia tri; neu 'image' la null/vang mat thi 'filter' (neu co) bi bo qua."
+  ]
+}
