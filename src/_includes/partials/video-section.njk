@@ -1,0 +1,50 @@
+<div x-data="videoCarousel" class="mx-auto w-full max-w-6xl px-4 py-16 sm:px-6 lg:flex lg:flex-1 lg:flex-col lg:justify-center lg:py-24">
+  <div class="mb-8 flex flex-col gap-3 text-center sm:mb-10">
+    <h2 class="text-3xl font-bold text-water-800 dark:text-earth-50 sm:text-4xl">Video nổi bật</h2>
+    <p class="text-water-700/80 dark:text-earth-100/80">Chạm vào một video để xem ngay trên trang.</p>
+  </div>
+
+  {% if videos.length == 0 %}
+  <p class="py-12 text-center text-water-700/70 dark:text-earth-100/70">Chưa có video nào.</p>
+  {% else %}
+  <div class="relative">
+    <div
+      x-ref="track"
+      @scroll="onTrackScroll()"
+      class="flex snap-x snap-mandatory gap-4 overflow-x-auto scroll-smooth pb-2"
+    >
+      {% asyncEach video in videos %}
+      <button
+        type="button"
+        @click='$store.videoModal.openVideo({{ video | dump | safe }})'
+        class="group relative aspect-video w-72 flex-shrink-0 snap-start overflow-hidden rounded-xl shadow-sm ring-1 ring-water-200/50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-water-500 dark:ring-water-700/50 sm:w-80"
+      >
+        {% cardImage video.poster, video.title, "absolute inset-0 h-full w-full object-cover transition duration-300 group-hover:scale-105" %}
+        <span class="absolute inset-0 flex items-center justify-center bg-water-900/30 text-4xl text-earth-50 opacity-0 transition group-hover:opacity-100" aria-hidden="true">▶</span>
+        <span class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-water-900/90 to-transparent p-3 text-left text-sm font-semibold text-earth-50">
+          {{ video.title }}
+        </span>
+      </button>
+      {% endeach %}
+    </div>
+
+    {% if videos.length > 1 %}
+    <div class="mt-5 flex items-center justify-center gap-2" role="tablist" aria-label="Chọn video">
+      {% for video in videos %}
+      <button
+        type="button"
+        role="tab"
+        @click="goToIndex({{ loop.index0 }})"
+        :aria-selected="activeIndex === {{ loop.index0 }}"
+        aria-label="Xem video số {{ loop.index }}: {{ video.title }}"
+        :class="activeIndex === {{ loop.index0 }} ? 'w-6 bg-water-600 dark:bg-earth-300' : 'w-2.5 bg-water-300 hover:bg-water-400 dark:bg-water-700 dark:hover:bg-water-600'"
+        class="h-2.5 rounded-full transition-all focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-water-500"
+      ></button>
+      {% endfor %}
+    </div>
+    {% endif %}
+  </div>
+  {% endif %}
+
+  {% include "partials/video-modal.njk" %}
+</div>

@@ -1,0 +1,17 @@
+---
+layout: layouts/base.njk
+title: BeBeo Gallery — Album ảnh & video gia đình
+description: BeBeo Gallery — nơi lưu giữ và chia sẻ khoảnh khắc ảnh, video của gia đình.
+---
+<section id="hero" data-section aria-label="Giới thiệu" class="relative isolate overflow-hidden bg-water-900 lg:min-h-screen lg:snap-start">
+  {% include "partials/hero.njk" %}
+</section>
+
+<section id="gallery" data-section aria-label="Ảnh" class="bg-earth-50 dark:bg-water-900 lg:min-h-screen lg:snap-start">
+  {% include "partials/gallery.njk" %}
+</section>
+
+<section id="video" data-section aria-label="Video" class="bg-water-50 dark:bg-earth-900 lg:flex lg:h-screen lg:flex-col lg:snap-start">
+  {% include "partials/video-section.njk" %}
+  {% include "partials/footer.njk" %}
+</section>

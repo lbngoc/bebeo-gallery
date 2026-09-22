@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="vi" class="lg:snap-y lg:snap-proximity">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>{{ title or "BeBeo Gallery" }}</title>
+  <meta name="description" content="{{ description or 'BeBeo Gallery — nơi lưu giữ và chia sẻ khoảnh khắc ảnh, video của gia đình.' }}">
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem("bebeo-theme");
+        var prefersDark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+        var isDark = saved ? saved === "dark" : prefersDark;
+        if (isDark) document.documentElement.classList.add("dark");
+      } catch (e) {}
+    })();
+  </script>
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/assets/styles/main.css">
+</head>
+<body class="font-body antialiased">
+  {% include "partials/header.njk" %}
+  <main>
+    {{ content | safe }}
+  </main>
+  <script type="module" src="/assets/scripts/main.js"></script>
+</body>
+</html>
