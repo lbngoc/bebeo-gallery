@@ -75,7 +75,7 @@ async function heroBackgroundShortcode(heroBackground) {
       metadata,
       {
         alt: "",
-        class: `absolute inset-0 h-full w-full object-cover ${filterClass}`,
+        class: `absolute inset-0 h-full w-full object-cover object-top ${filterClass}`,
         loading: "eager",
         decoding: "async",
         sizes: "100vw",

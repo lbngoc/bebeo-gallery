@@ -5,9 +5,9 @@ function buildEmbedUrl(video) {
   if (!video) return null;
   switch (video.sourceType) {
     case "youtube":
-      return `https://www.youtube-nocookie.com/embed/${video.embedRef}`;
+      return `https://www.youtube-nocookie.com/embed/${video.embedRef}?autoplay=1&mute=1`;
     case "google-drive":
-      return `https://drive.google.com/file/d/${video.embedRef}/preview`;
+      return `https://drive.google.com/file/d/${video.embedRef}/preview?autoplay=1`;
     case "pcloud":
       return video.embedRef;
     default:

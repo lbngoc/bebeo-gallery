@@ -109,3 +109,10 @@
 .hero-filter-tinted {
   filter: grayscale(1) sepia(0.25) saturate(1.4) hue-rotate(150deg) brightness(0.85);
 }
+
+/* Lớp phủ tăng tương phản cho chữ Hero, đặt giữa nền (ảnh thật/trừu tượng) và
+   nội dung (T019) — giữ chữ đọc được trên mọi vùng sáng/tối của ảnh nền thật,
+   không đổi cảm nhận khi vẫn dùng nền trừu tượng mặc định. */
+.hero-scrim {
+  background: radial-gradient(65% 60% at 50% 45%, color-mix(in srgb, var(--color-water-900) 78%, transparent), transparent 78%);
+}
