@@ -29,8 +29,8 @@
     "description": "Phóng sự lễ vu quy của Ngọc & Vân Anh tại Pavillon Restaurant.",
     "categories": ["Đám cưới", "Vu quy"],
     "thumbnail": "/assets/images/thumbnails/albums/ngoc-anh-vu-quy.jpg",
-    "cloudUrl": "https://drive.google.com/drive/folders/1BgSFchPPiuN36RRsfjth3Q2erth09kUa",
-    "cloudProvider": "google-drive"
+    "cloudUrl": "https://u.pcloud.link/publink/show?code=kZjYE4JZPbjb1rcbz8ROYe6t2FhM0LQeFEP7",
+    "cloudProvider": "pcloud"
   },
   {
     "id": "ngoc-anh-dam-cuoi",
@@ -40,7 +40,29 @@
     "description": "Phóng sự lễ cưới của Ngọc & Vân Anh tại Phan Rang - Ninh Thuận.",
     "categories": ["Đám cưới"],
     "thumbnail": "/assets/images/thumbnails/albums/ngoc-anh-dam-cuoi.jpg",
-    "cloudUrl": "https://drive.google.com/drive/folders/1W49H65q133nwJtBVD8w5riLnCHyg1LNT",
-    "cloudProvider": "google-drive"
+    "cloudUrl": "https://u.pcloud.link/publink/show?code=kZcYE4JZJ6fp6SjkHwyiI5nG2pzsOuS7rLNV",
+    "cloudProvider": "pcloud"
+  },
+  {
+    "id": "ha-long-2023",
+    "title": "Du lịch Hạ Long",
+    "location": "Hạ Long, Quảng Ninh",
+    "date": "2023-07",
+    "description": "Chuyến du lịch ngắm vịnh Hạ Long.",
+    "categories": ["Du lịch"],
+    "thumbnail": "/assets/images/thumbnails/albums/ha-long-2023.jpg",
+    "cloudUrl": "https://u.pcloud.link/publink/show?code=kZ71E4JZEU5PcR5Fwp87RrATdTNX9FDcuSJX",
+    "cloudProvider": "pcloud"
+  },
+  {
+    "id": "vinh-hy-2024",
+    "title": "Du lịch Vĩnh Hy",
+    "location": "Vĩnh Hy, Ninh Thuận",
+    "date": "2024-08",
+    "description": "Chuyến du lịch ngắm vịnh Vĩnh Hy.",
+    "categories": ["Du lịch"],
+    "thumbnail": "/assets/images/thumbnails/albums/vinh-hy-2024.jpg",
+    "cloudUrl": "https://u.pcloud.link/publink/show?code=kZpsO4JZhF2XNRly7YHeGBkpUgurzjAmUT6V",
+    "cloudProvider": "pcloud"
   }
 ]
