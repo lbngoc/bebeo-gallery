@@ -1,29 +1,38 @@
 [
   {
-    "id": "gia-dinh-di-choi",
-    "title": "Gia đình đi chơi cuối tuần",
-    "poster": "/assets/images/thumbnails/videos/camping.jpg",
+    "id": "ngoc-anh-pre-film",
+    "title": "Phim Prewedding Ngọc & Vân Anh",
+    "poster": "/assets/images/thumbnails/videos/ngoc-anh-pre.jpg",
     "sourceType": "youtube",
-    "embedRef": "aqz-KE-bpKQ",
-    "fallbackUrl": "https://www.youtube.com/watch?v=aqz-KE-bpKQ",
+    "embedRef": "dod945X4OPM",
+    "fallbackUrl": "https://www.youtube.com/watch?v=dod945X4OPM",
     "order": 1
   },
   {
-    "id": "khoanh-khac-sum-hop",
-    "title": "Khoảnh khắc sum họp Tết",
-    "poster": "/assets/images/thumbnails/videos/family-gathering.jpg",
-    "sourceType": "google-drive",
-    "embedRef": "1a2B3c4D5e6F7g8H9iJ0kLmNoPqRsTuV",
-    "fallbackUrl": "https://drive.google.com/file/d/1a2B3c4D5e6F7g8H9iJ0kLmNoPqRsTuV/view",
+    "id": "ngoc-anh-wedding-film-1",
+    "title": "Phim cưới Ngọc & Vân Anh - Phần 1",
+    "poster": "/assets/images/thumbnails/videos/wedding-film-part-1.jpg",
+    "sourceType": "youtube",
+    "embedRef": "hTU-BbeIvN0",
+    "fallbackUrl": "https://www.youtube.com/watch?v=hTU-BbeIvN0",
     "order": 2
   },
   {
-    "id": "video-cam-trai",
-    "title": "Video cắm trại Ba Vì",
-    "poster": "/assets/images/thumbnails/videos/bunny-trailer.jpg",
-    "sourceType": "pcloud",
-    "embedRef": "https://www.pcloud.com/publink/show?code=example-video-cam-trai",
-    "fallbackUrl": "https://www.pcloud.com/publink/show?code=example-video-cam-trai",
+    "id": "ngoc-anh-wedding-film-2",
+    "title": "Phim cưới Ngọc & Vân Anh - Phần 2",
+    "poster": "/assets/images/thumbnails/videos/wedding-film-part-2.jpg",
+    "sourceType": "youtube",
+    "embedRef": "zouuAlR88cw",
+    "fallbackUrl": "https://www.youtube.com/watch?v=zouuAlR88cw",
     "order": 3
+  },
+  {
+    "id": "ngoc-anh-wedding-flycam",
+    "title": "Flycam ngày cưới Ngọc & Vân Anh",
+    "poster": "/assets/images/thumbnails/videos/wedding-day-flycam.jpg",
+    "sourceType": "youtube",
+    "embedRef": "gwvs8lDEZ98",
+    "fallbackUrl": "https://www.youtube.com/watch?v=gwvs8lDEZ98",
+    "order": 4
   }
 ]
