@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>{{ title or "BeBeo Gallery" }}</title>
   <meta name="description" content="{{ description or 'BeBeo Gallery — nơi lưu giữ và chia sẻ khoảnh khắc ảnh, video của gia đình.' }}">
+  {# Site chỉ dành cho gia đình (Nguyên tắc V hiến pháp) — chặn công cụ tìm kiếm index/theo dõi link, dù trang vẫn public không cần đăng nhập. #}
+  <meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
   <script>
     (function () {
       try {
