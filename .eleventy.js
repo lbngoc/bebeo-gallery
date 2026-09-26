@@ -54,7 +54,10 @@ async function cardImageShortcode(src, alt, className = "") {
 async function heroBackgroundShortcode(heroBackground) {
   const config = heroBackground || {};
   const filterMode = config.filter === "mono" ? "mono" : "tinted";
-  const abstractHtml = `<div class="absolute inset-0 hero-bg-abstract" data-hero-parallax-layer aria-hidden="true"></div>`;
+  // Lớp nền tràn quá biên section theo chiều dọc (-10% mỗi phía) thay vì
+  // đúng bằng inset-0, để hero-parallax.js có "vùng đệm" mà dịch chuyển
+  // trong đó không bao giờ lộ màu nền gốc của section (xem T022).
+  const abstractHtml = `<div class="absolute -top-[10%] -bottom-[10%] left-0 right-0 hero-bg-abstract" data-hero-parallax-layer aria-hidden="true"></div>`;
 
   if (!config.image) return abstractHtml;
 
@@ -75,7 +78,7 @@ async function heroBackgroundShortcode(heroBackground) {
       metadata,
       {
         alt: "",
-        class: `absolute inset-0 h-full w-full object-cover object-top ${filterClass}`,
+        class: `absolute left-0 right-0 -top-[10%] h-[120%] object-cover object-top ${filterClass}`,
         loading: "eager",
         decoding: "async",
         sizes: "100vw",
